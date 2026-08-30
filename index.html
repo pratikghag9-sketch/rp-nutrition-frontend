@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RP Nutrition | Premium Sports Supplements — Roha, Maharashtra</title>
+<meta name="description" content="RP Nutrition — 100% Genuine Premium Sports Nutrition. Wholesale & Retail. PAN India Delivery. Based in Roha, Raigad, Maharashtra.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0A0909;
+    --bg-alt:#131011;
+    --card:#1B1718;
+    --card-border:#2C2628;
+    --red:#D62839;
+    --red-deep:#8F1D2C;
+    --orange:#F77F00;
+    --gold:#E3B04B;
+    --text:#F6F1EC;
+    --text-dim:#B3ABA6;
+    --text-faint:#736C69;
+    --success:#3FA34D;
+    --radius:10px;
+    --maxw:1220px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Inter',sans-serif;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+  ul{list-style:none;}
+  .display{font-family:'Bebas Neue',sans-serif;letter-spacing:0.02em;}
+  .mono{font-family:'JetBrains Mono',monospace;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;}
+  ::selection{background:var(--red);color:#fff;}
+
+  /* ---------- focus visibility ---------- */
+  a:focus-visible, button:focus-visible, input:focus-visible{
+    outline:2px solid var(--orange);
+    outline-offset:3px;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important; scroll-behavior:auto !important;}
+  }
+
+  /* ---------- top strip ---------- */
+  .topstrip{
+    background:var(--red-deep);
+    color:#F6E9E9;
+    font-size:12.5px;
+    letter-spacing:0.04em;
+    text-align:center;
+    padding:7px 12px;
+    font-weight:600;
+  }
+  .topstrip span{color:var(--gold);}
+
+  /* ---------- header ---------- */
+  header{
+    position:sticky;top:0;z-index:100;
+    background:rgba(10,9,9,0.88);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--card-border);
+  }
+  .nav{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:14px 28px;max-width:var(--maxw);margin:0 auto;
+  }
+  .brand{display:flex;align-items:center;gap:10px;}
+  .brand img{width:44px;height:44px;border-radius:50%;}
+  .brand-name{font-family:'Bebas Neue',sans-serif;font-size:24px;letter-spacing:0.03em;line-height:1;}
+  .brand-name small{display:block;font-family:'Inter',sans-serif;font-size:9px;letter-spacing:0.18em;color:var(--text-faint);font-weight:600;margin-top:2px;}
+  .navlinks{display:flex;gap:34px;align-items:center;}
+  .navlinks a{font-size:14px;font-weight:600;color:var(--text-dim);transition:color .2s;}
+  .navlinks a:hover{color:var(--orange);}
+  .nav-actions{display:flex;align-items:center;gap:16px;}
+  .icon-btn{
+    position:relative;background:none;border:1px solid var(--card-border);color:var(--text);
+    width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+    cursor:pointer;transition:border-color .2s, background .2s;
+  }
+  .icon-btn:hover{border-color:var(--orange);background:rgba(247,127,0,0.08);}
+  .cart-count{
+    position:absolute;top:-6px;right:-6px;background:var(--orange);color:#141010;
+    font-size:10.5px;font-weight:800;width:19px;height:19px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .btn-menu{display:none;background:none;border:none;color:var(--text);cursor:pointer;}
+  .mobile-nav{
+    display:none;flex-direction:column;gap:2px;
+    background:var(--bg-alt);border-top:1px solid var(--card-border);
+    max-height:0;overflow:hidden;transition:max-height .25s ease;
+  }
+  .mobile-nav.open{max-height:260px;}
+  .mobile-nav a{padding:14px 28px;font-size:15px;font-weight:600;color:var(--text-dim);border-bottom:1px solid var(--card-border);}
+  .mobile-nav a:hover{color:var(--orange);}
+  @media (max-width:680px){
+    .mobile-nav{display:flex;}
+  }
+
+  /* ---------- buttons ---------- */
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    padding:13px 26px;border-radius:6px;font-weight:700;font-size:14.5px;
+    cursor:pointer;border:none;transition:transform .15s ease, box-shadow .15s ease, background .2s;
+    white-space:nowrap;
+  }
+  .btn-primary{background:linear-gradient(100deg,var(--red),var(--orange));color:#fff;box-shadow:0 8px 22px -8px rgba(214,40,57,0.6);}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 26px -8px rgba(247,127,0,0.55);}
+  .btn-outline{background:transparent;color:var(--text);border:1.5px solid var(--card-border);}
+  .btn-outline:hover{border-color:var(--gold);color:var(--gold);}
+  .btn-dark{background:#0A0909;color:var(--text);border:1.5px solid var(--card-border);}
+  .btn-dark:hover{border-color:var(--orange);}
+  .btn-block{width:100%;}
+  .btn-sm{padding:9px 16px;font-size:13px;}
+
+  /* ---------- hero ---------- */
+  .hero{
+    position:relative;
+    padding:96px 0 84px;
+    overflow:hidden;
+    background:
+      radial-gradient(circle at 82% 18%, rgba(214,40,57,0.28), transparent 46%),
+      radial-gradient(circle at 12% 88%, rgba(247,127,0,0.16), transparent 50%),
+      var(--bg);
+  }
+  .hero::after{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background-image:linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+    background-size:44px 44px;
+    mask-image:radial-gradient(circle at 70% 30%, black, transparent 65%);
+  }
+  .hero-grid{display:grid;grid-template-columns:1.15fr 0.85fr;gap:50px;align-items:center;position:relative;}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;
+    color:var(--gold);background:rgba(227,176,75,0.1);border:1px solid rgba(227,176,75,0.3);
+    padding:7px 14px;border-radius:100px;margin-bottom:22px;
+  }
+  .eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--success);box-shadow:0 0 0 3px rgba(63,163,77,0.25);}
+  .hero h1{
+    font-size:clamp(48px,6.4vw,86px);
+    line-height:0.94;
+    text-transform:uppercase;
+  }
+  .hero h1 .accent{
+    background:linear-gradient(100deg,var(--red),var(--orange) 70%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .hero p.lead{
+    margin-top:22px;font-size:17.5px;color:var(--text-dim);max-width:480px;
+  }
+  .hero-ctas{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap;}
+  .hero-badges{display:flex;gap:26px;margin-top:44px;flex-wrap:wrap;}
+  .hero-badge{display:flex;align-items:center;gap:10px;}
+  .hero-badge .num{font-family:'Bebas Neue',sans-serif;font-size:26px;color:var(--gold);line-height:1;}
+  .hero-badge .lbl{font-size:11.5px;color:var(--text-faint);font-weight:600;text-transform:uppercase;letter-spacing:0.05em;}
+
+  .hero-visual{position:relative;display:flex;align-items:center;justify-content:center;}
+  .seal{
+    position:relative;width:340px;height:340px;border-radius:50%;
+    background:radial-gradient(circle at 32% 28%, #241B1D, #0E0B0C 72%);
+    border:1px solid var(--card-border);
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 30px 70px -20px rgba(214,40,57,0.4), inset 0 0 60px rgba(0,0,0,0.5);
+  }
+  .seal-ring{
+    position:absolute;inset:14px;border-radius:50%;
+    background:conic-gradient(from 200deg, var(--gold), var(--orange), var(--red), var(--gold));
+    padding:3px;
+    -webkit-mask:linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite:xor;mask-composite:exclude;
+  }
+  .seal img{width:66%;border-radius:50%;}
+  .float-tag{
+    position:absolute;background:var(--card);border:1px solid var(--card-border);
+    padding:10px 16px;border-radius:9px;font-size:12.5px;font-weight:700;
+    box-shadow:0 12px 30px -12px rgba(0,0,0,0.6);display:flex;align-items:center;gap:8px;
+  }
+  .float-tag.tag1{top:6%;left:-6%;color:var(--success);}
+  .float-tag.tag2{bottom:10%;right:-8%;color:var(--gold);}
+
+  /* ---------- trust strip ---------- */
+  .trust{
+    background:var(--bg-alt);border-top:1px solid var(--card-border);border-bottom:1px solid var(--card-border);
+    padding:26px 0;
+  }
+  .trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
+  .trust-item{display:flex;align-items:center;gap:12px;}
+  .trust-item .ico{
+    width:42px;height:42px;border-radius:8px;flex:none;
+    background:rgba(214,40,57,0.12);border:1px solid rgba(214,40,57,0.3);
+    display:flex;align-items:center;justify-content:center;color:var(--red);
+  }
+  .trust-item h4{font-size:13.5px;font-weight:700;}
+  .trust-item p{font-size:12px;color:var(--text-faint);margin-top:1px;}
+
+  /* ---------- section heading ---------- */
+  .section{padding:88px 0;}
+  .section-alt{background:var(--bg-alt);}
+  .sec-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:42px;gap:20px;flex-wrap:wrap;}
+  .sec-tag{font-size:12px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--red);margin-bottom:10px;}
+  .sec-head h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(32px,4vw,48px);text-transform:uppercase;line-height:1;}
+  .sec-head p{color:var(--text-dim);max-width:420px;font-size:15px;}
+
+  /* ---------- category filter ---------- */
+  .cat-filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:36px;}
+  .cat-chip{
+    padding:9px 18px;border-radius:100px;border:1px solid var(--card-border);
+    background:transparent;color:var(--text-dim);font-size:13px;font-weight:600;cursor:pointer;
+    transition:all .2s;
+  }
+  .cat-chip:hover{border-color:var(--orange);color:var(--text);}
+  .cat-chip.active{background:var(--red);border-color:var(--red);color:#fff;}
+
+  /* ---------- product grid ---------- */
+  .prod-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;}
+  .card{
+    background:var(--card);border:1px solid var(--card-border);border-radius:var(--radius);
+    overflow:hidden;transition:border-color .2s, transform .2s;position:relative;
+  }
+  .card:hover{border-color:rgba(247,127,0,0.4);transform:translateY(-4px);}
+  .card-media{
+    position:relative;aspect-ratio:1/0.95;
+    background:linear-gradient(150deg,#221C1D,#141011);
+    display:flex;align-items:center;justify-content:center;
+    border-bottom:1px solid var(--card-border);
+  }
+  .card-media .jar{width:56%;color:var(--text-faint);}
+  .card-cat{
+    position:absolute;top:12px;left:12px;background:rgba(10,9,9,0.75);backdrop-filter:blur(4px);
+    color:var(--gold);font-size:10.5px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;
+    padding:5px 10px;border-radius:100px;border:1px solid rgba(227,176,75,0.3);
+  }
+  .stamp{
+    position:absolute;bottom:10px;right:10px;width:46px;height:46px;border-radius:50%;
+    background:rgba(63,163,77,0.14);border:1.5px dashed rgba(63,163,77,0.55);
+    display:flex;align-items:center;justify-content:center;color:var(--success);
+    transform:rotate(-12deg);
+  }
+  .card-body{padding:16px 16px 18px;}
+  .card-body h3{font-size:15px;font-weight:700;margin-bottom:3px;}
+  .card-body .desc{font-size:12.5px;color:var(--text-faint);margin-bottom:12px;min-height:32px;}
+  .price-row{display:flex;align-items:center;justify-content:space-between;}
+  .price{font-family:'JetBrains Mono',monospace;font-weight:700;font-size:17px;color:var(--gold);}
+  .price .strike{font-size:12px;color:var(--text-faint);text-decoration:line-through;font-weight:500;margin-right:6px;}
+  .add-btn{
+    background:var(--red);color:#fff;border:none;width:38px;height:38px;border-radius:8px;
+    display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .2s, transform .15s;
+  }
+  .add-btn:hover{background:var(--orange);transform:scale(1.06);}
+  .add-btn.added{background:var(--success);}
+
+  /* ---------- why us ---------- */
+  .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .why-card{
+    background:var(--bg);border:1px solid var(--card-border);border-radius:var(--radius);padding:30px 26px;
+    transition:border-color .2s;
+  }
+  .why-card:hover{border-color:rgba(214,40,57,0.4);}
+  .why-num{font-family:'Bebas Neue',sans-serif;font-size:15px;color:var(--red);letter-spacing:0.05em;margin-bottom:14px;}
+  .why-card h3{font-size:19px;margin-bottom:9px;}
+  .why-card p{color:var(--text-dim);font-size:14px;}
+
+  /* ---------- stats ---------- */
+  .stats-bar{
+    display:grid;grid-template-columns:repeat(4,1fr);
+    border:1px solid var(--card-border);border-radius:var(--radius);overflow:hidden;
+  }
+  .stat{padding:30px 20px;text-align:center;border-right:1px solid var(--card-border);}
+  .stat:last-child{border-right:none;}
+  .stat .n{font-family:'Bebas Neue',sans-serif;font-size:42px;background:linear-gradient(100deg,var(--gold),var(--orange));-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .stat .l{font-size:12px;color:var(--text-faint);text-transform:uppercase;letter-spacing:0.06em;margin-top:4px;font-weight:600;}
+
+  /* ---------- wholesale banner ---------- */
+  .wholesale{
+    border-radius:16px;padding:56px;position:relative;overflow:hidden;
+    background:linear-gradient(120deg,#2A1013,#1B1011 55%, #17110B);
+    border:1px solid var(--card-border);
+    display:grid;grid-template-columns:1.3fr auto;gap:30px;align-items:center;
+  }
+  .wholesale::before{
+    content:"";position:absolute;top:-40%;right:-8%;width:420px;height:420px;border-radius:50%;
+    background:radial-gradient(circle,rgba(247,127,0,0.25),transparent 68%);
+  }
+  .wholesale h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(28px,3.4vw,42px);text-transform:uppercase;line-height:1.05;position:relative;}
+  .wholesale p{color:var(--text-dim);max-width:520px;margin-top:12px;font-size:15px;position:relative;}
+  .wholesale .actions{position:relative;display:flex;gap:12px;flex-wrap:wrap;}
+
+  /* ---------- location ---------- */
+  .loc-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;}
+  .loc-card{
+    background:var(--card);border:1px solid var(--card-border);border-radius:var(--radius);padding:34px;
+  }
+  .loc-row{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid var(--card-border);}
+  .loc-row:last-child{border-bottom:none;}
+  .loc-row .ico{width:38px;height:38px;border-radius:8px;background:rgba(214,40,57,0.12);border:1px solid rgba(214,40,57,0.3);display:flex;align-items:center;justify-content:center;color:var(--red);flex:none;}
+  .loc-row h4{font-size:14.5px;font-weight:700;margin-bottom:3px;}
+  .loc-row p{font-size:13.5px;color:var(--text-dim);}
+  .map-box{
+    aspect-ratio:1/0.85;border-radius:var(--radius);border:1px solid var(--card-border);
+    background:
+      radial-gradient(circle at 60% 40%, rgba(214,40,57,0.22), transparent 55%),
+      repeating-linear-gradient(45deg, #171314, #171314 12px, #1B1718 12px, #1B1718 24px);
+    display:flex;align-items:center;justify-content:center;position:relative;
+  }
+  .map-pin{display:flex;flex-direction:column;align-items:center;gap:10px;color:var(--gold);}
+  .map-pin span{font-size:13px;font-weight:700;color:var(--text);background:var(--bg);padding:6px 14px;border-radius:100px;border:1px solid var(--card-border);}
+
+  /* ---------- footer ---------- */
+  footer{background:var(--bg-alt);border-top:1px solid var(--card-border);padding:56px 0 26px;}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px;margin-bottom:40px;}
+  .foot-brand{display:flex;align-items:center;gap:10px;margin-bottom:14px;}
+  .foot-brand img{width:38px;height:38px;border-radius:50%;}
+  .foot-brand span{font-family:'Bebas Neue',sans-serif;font-size:21px;}
+  footer p.tag{color:var(--text-faint);font-size:13.5px;max-width:280px;}
+  footer h5{font-size:12.5px;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-faint);margin-bottom:16px;}
+  footer li{margin-bottom:10px;}
+  footer a{font-size:14px;color:var(--text-dim);transition:color .2s;}
+  footer a:hover{color:var(--orange);}
+  .foot-bottom{border-top:1px solid var(--card-border);padding-top:22px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+  .foot-bottom p{font-size:12.5px;color:var(--text-faint);}
+  .socials{display:flex;gap:10px;}
+  .socials a{width:36px;height:36px;border-radius:8px;border:1px solid var(--card-border);display:flex;align-items:center;justify-content:center;color:var(--text-dim);}
+  .socials a:hover{color:var(--orange);border-color:var(--orange);}
+
+  /* ---------- cart drawer ---------- */
+  .overlay{
+    position:fixed;inset:0;background:rgba(0,0,0,0.55);backdrop-filter:blur(2px);
+    z-index:200;opacity:0;pointer-events:none;transition:opacity .25s;
+  }
+  .overlay.show{opacity:1;pointer-events:auto;}
+  .cart-drawer{
+    position:fixed;top:0;right:0;height:100%;width:400px;max-width:92vw;
+    background:var(--bg-alt);border-left:1px solid var(--card-border);
+    z-index:201;transform:translateX(100%);transition:transform .3s ease;
+    display:flex;flex-direction:column;
+  }
+  .cart-drawer.open{transform:translateX(0);}
+  .cart-head{display:flex;align-items:center;justify-content:space-between;padding:22px 24px;border-bottom:1px solid var(--card-border);}
+  .cart-head h3{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:0.04em;}
+  .cart-close{background:none;border:none;color:var(--text-dim);cursor:pointer;padding:4px;}
+  .cart-items{flex:1;overflow-y:auto;padding:16px 24px;}
+  .cart-empty{text-align:center;padding:60px 10px;color:var(--text-faint);}
+  .cart-empty svg{margin-bottom:14px;opacity:0.5;}
+  .cart-item{display:flex;gap:12px;padding:14px 0;border-bottom:1px solid var(--card-border);}
+  .cart-item .ci-media{width:56px;height:56px;border-radius:8px;background:linear-gradient(150deg,#221C1D,#141011);border:1px solid var(--card-border);flex:none;display:flex;align-items:center;justify-content:center;color:var(--text-faint);}
+  .ci-body{flex:1;}
+  .ci-body h5{font-size:13.5px;font-weight:700;margin-bottom:2px;}
+  .ci-body .ci-price{font-family:'JetBrains Mono',monospace;color:var(--gold);font-size:13px;}
+  .qty-ctrl{display:flex;align-items:center;gap:10px;margin-top:8px;}
+  .qty-ctrl button{width:24px;height:24px;border-radius:6px;border:1px solid var(--card-border);background:var(--card);color:var(--text);cursor:pointer;font-size:13px;line-height:1;}
+  .qty-ctrl span{font-size:13px;font-weight:700;min-width:16px;text-align:center;}
+  .ci-remove{background:none;border:none;color:var(--text-faint);cursor:pointer;align-self:flex-start;}
+  .ci-remove:hover{color:var(--red);}
+  .cart-foot{padding:22px 24px;border-top:1px solid var(--card-border);}
+  .cart-total-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;}
+  .cart-total-row span:first-child{color:var(--text-dim);font-size:14px;}
+  .cart-total-row .amt{font-family:'JetBrains Mono',monospace;font-size:20px;font-weight:700;color:var(--gold);}
+  .cart-note{font-size:11.5px;color:var(--text-faint);margin-top:10px;text-align:center;}
+
+  /* ---------- toast ---------- */
+  .toast{
+    position:fixed;bottom:26px;left:50%;transform:translateX(-50%) translateY(20px);
+    background:var(--card);border:1px solid var(--success);color:var(--text);
+    padding:12px 22px;border-radius:9px;font-size:13.5px;font-weight:600;
+    display:flex;align-items:center;gap:10px;z-index:300;opacity:0;pointer-events:none;
+    transition:opacity .25s, transform .25s;
+  }
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+  .toast svg{color:var(--success);flex:none;}
+
+  /* ---------- whatsapp fab ---------- */
+  .wa-fab{
+    position:fixed;bottom:26px;right:26px;width:56px;height:56px;border-radius:50%;
+    background:#25D366;display:flex;align-items:center;justify-content:center;
+    box-shadow:0 10px 26px -8px rgba(37,211,102,0.6);z-index:90;transition:transform .2s;
+  }
+  .wa-fab:hover{transform:scale(1.08);}
+
+  /* ---------- responsive ---------- */
+  @media (max-width:980px){
+    .hero-grid{grid-template-columns:1fr;}
+    .hero-visual{order:-1;margin-bottom:10px;}
+    .seal{width:230px;height:230px;}
+    .trust-grid{grid-template-columns:repeat(2,1fr);}
+    .prod-grid{grid-template-columns:repeat(2,1fr);}
+    .why-grid{grid-template-columns:1fr;}
+    .stats-bar{grid-template-columns:repeat(2,1fr);}
+    .stat{border-bottom:1px solid var(--card-border);}
+    .wholesale{grid-template-columns:1fr;padding:36px 26px;}
+    .loc-grid{grid-template-columns:1fr;}
+    .foot-grid{grid-template-columns:1fr 1fr;}
+  }
+  @media (max-width:680px){
+    .navlinks{display:none;}
+    .btn-menu{display:block;}
+    .prod-grid{grid-template-columns:1fr 1fr;}
+    .foot-grid{grid-template-columns:1fr;}
+    .cat-filters{flex-wrap:nowrap;overflow-x:auto;padding-bottom:6px;}
+  }
+</style>
+</head>
+<body>
+
+<div class="topstrip">🏆 100% GENUINE SUPPLEMENTS &nbsp;•&nbsp; <span>WHOLESALE &amp; RETAIL</span> &nbsp;•&nbsp; PAN INDIA DELIVERY &nbsp;•&nbsp; BASED IN ROHA, RAIGAD</div>
+
+<header>
+  <div class="nav">
+    <a href="#home" class="brand">
+      <img src="assets/logo.png" alt="RP Nutrition logo">
+      <div class="brand-name">RP NUTRITION<small>FUEL YOUR POTENTIAL</small></div>
+    </a>
+    <nav class="navlinks">
+      <a href="#shop">Shop</a>
+      <a href="#why">Why Us</a>
+      <a href="#wholesale">Wholesale</a>
+      <a href="#location">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="btn-menu" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <button class="icon-btn" id="cartBtn" aria-label="Open cart">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none"><path d="M3 3h2l.4 2M7 13h10l3-8H5.4M7 13L5.4 5M7 13l-1.5 6h13M10 21a1 1 0 100-2 1 1 0 000 2zM17 21a1 1 0 100-2 1 1 0 000 2z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#shop">Shop</a>
+    <a href="#why">Why Us</a>
+    <a href="#wholesale">Wholesale</a>
+    <a href="#location">Contact</a>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow"><span class="dot"></span> Lab-Verified &amp; 100% Genuine</div>
+      <h1>STRENGTH.<br>PERFORMANCE.<br><span class="accent">RESULTS.</span></h1>
+      <p class="lead">Premium sports nutrition sourced and sealed for authenticity — whey, gainers, creatine &amp; more. Wholesale and retail, shipped PAN India from our base in Roha, Raigad.</p>
+      <div class="hero-ctas">
+        <a href="#shop" class="btn btn-primary">
+          Shop Supplements
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#wholesale" class="btn btn-outline">Bulk / Wholesale Enquiry</a>
+      </div>
+      <div class="hero-badges">
+        <div class="hero-badge"><span class="num">600+</span><span class="lbl">Happy Athletes</span></div>
+        <div class="hero-badge"><span class="num">100%</span><span class="lbl">Genuine Stock</span></div>
+        <div class="hero-badge"><span class="num">PAN</span><span class="lbl">India Delivery</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="float-tag tag1">✓ Sealed &amp; Verified</div>
+      <div class="seal">
+        <div class="seal-ring"></div>
+        <img src="assets/logo.png" alt="RP Nutrition badge">
+      </div>
+      <div class="float-tag tag2">★ Premium Grade</div>
+    </div>
+  </div>
+</section>
+
+<section class="trust">
+  <div class="wrap trust-grid">
+    <div class="trust-item">
+      <div class="ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4M12 22c4-2 8-6 8-12V5l-8-3-8 3v5c0 6 4 10 8 12z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div><h4>100% Genuine</h4><p>Verified authentic stock</p></div>
+    </div>
+    <div class="trust-item">
+      <div class="ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none"><path d="M21 8v13H3V8M1 3h22v5H1V3zM10 12h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div><h4>Wholesale + Retail</h4><p>Bulk pricing available</p></div>
+    </div>
+    <div class="trust-item">
+      <div class="ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none"><path d="M3 3h13v13H3zM16 8h4l3 3v5h-7V8zM5.5 21a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM18.5 21a2.5 2.5 0 100-5 2.5 2.5 0 000 5z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div><h4>PAN India Shipping</h4><p>Delivered to your door</p></div>
+    </div>
+    <div class="trust-item">
+      <div class="ico"><svg width="19" height="19" viewBox="0 0 24 24" fill="none"><path d="M12 2l1.6 4.6L18 8l-4.4 1.4L12 14l-1.6-4.6L6 8l4.4-1.4L12 2zM19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8L19 15z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div><h4>Roha, Raigad</h4><p>Maharashtra based brand</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="shop">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="sec-tag">The Catalog</div>
+        <h2>Shop by Category</h2>
+      </div>
+      <p>Every product verified for authenticity before it leaves our warehouse in Roha.</p>
+    </div>
+    <div class="cat-filters" id="catFilters">
+      <button class="cat-chip active" data-cat="all">All Products</button>
+      <button class="cat-chip" data-cat="whey">Whey Protein</button>
+      <button class="cat-chip" data-cat="gainer">Mass Gainer</button>
+      <button class="cat-chip" data-cat="preworkout">Pre-Workout</button>
+      <button class="cat-chip" data-cat="creatine">Creatine</button>
+      <button class="cat-chip" data-cat="bcaa">BCAA / Recovery</button>
+      <button class="cat-chip" data-cat="vitamins">Vitamins</button>
+    </div>
+    <div class="prod-grid" id="prodGrid"></div>
+  </div>
+</section>
+
+<section class="section section-alt" id="why">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="sec-tag">The RP Standard</div>
+        <h2>Why Lifters Trust Us</h2>
+      </div>
+      <p>We built RP Nutrition to fix one problem — fake supplements flooding the market.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-num">STANDARD 01</div>
+        <h3>Verified Authenticity</h3>
+        <p>Every batch checked against manufacturer holograms and batch codes before it's listed — no greymarket stock, ever.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-num">STANDARD 02</div>
+        <h3>Wholesale-Ready</h3>
+        <p>Gym owners and retailers get direct bulk pricing with consistent supply — no minimum order drama.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-num">STANDARD 03</div>
+        <h3>PAN India Reach</h3>
+        <p>Shipped from Roha to any pincode in India, with tracked delivery and careful, tamper-proof packaging.</p>
+      </div>
+    </div>
+    <div style="height:44px;"></div>
+    <div class="stats-bar">
+      <div class="stat"><div class="n">600+</div><div class="l">Followers &amp; Growing</div></div>
+      <div class="stat"><div class="n">100%</div><div class="l">Genuine Guarantee</div></div>
+      <div class="stat"><div class="n">6+</div><div class="l">Product Categories</div></div>
+      <div class="stat"><div class="n">24H</div><div class="l">Dispatch Time</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="wholesale">
+  <div class="wrap">
+    <div class="wholesale">
+      <div>
+        <h2>Own a Gym or Store?<br>Stock RP Nutrition.</h2>
+        <p>Get wholesale pricing on our full range with dependable PAN India supply. Message us your requirement and we'll send a rate card within the day.</p>
+      </div>
+      <div class="actions">
+        <a href="https://wa.me/910000000000?text=Hi%20RP%20Nutrition%2C%20I%27d%20like%20a%20wholesale%20rate%20card." class="btn btn-primary" target="_blank" rel="noopener">Get Wholesale Rates</a>
+        <a href="#location" class="btn btn-dark">Contact Details</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="location">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="sec-tag">Find Us</div>
+        <h2>Based in Roha, Raigad</h2>
+      </div>
+      <p>Reach out for orders, wholesale enquiries, or supplement advice.</p>
+    </div>
+    <div class="loc-grid">
+      <div class="loc-card">
+        <div class="loc-row">
+          <div class="ico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M12 22s7-5.5 7-12a7 7 0 10-14 0c0 6.5 7 12 7 12z" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.8"/></svg></div>
+          <div><h4>Warehouse Address</h4><p>Roha, Raigad District, Maharashtra, India</p></div>
+        </div>
+        <div class="loc-row">
+          <div class="ico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M3 5a2 2 0 012-2h3l2 5-2.5 1.5a11 11 0 005 5L14 12l5 2v3a2 2 0 01-2 2C9.5 19 3 12.5 3 5z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div><h4>WhatsApp / Call</h4><p>Order directly via WhatsApp for fastest response</p></div>
+        </div>
+        <div class="loc-row">
+          <div class="ico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M3 8l9 6 9-6M3 6h18v12H3z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div><h4>Instagram</h4><p>@rp_nutrition_roha</p></div>
+        </div>
+        <div class="loc-row">
+          <div class="ico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M12 8v4l3 3M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div><h4>Dispatch Hours</h4><p>Mon – Sat, 10 AM – 7 PM IST</p></div>
+        </div>
+      </div>
+      <div class="map-box">
+        <div class="map-pin">
+          <svg width="34" height="34" viewBox="0 0 24 24" fill="none"><path d="M12 22s7-5.5 7-12a7 7 0 10-14 0c0 6.5 7 12 7 12z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.6"/></svg>
+          <span>Roha, Raigad, Maharashtra</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="#home" class="foot-brand"><img src="assets/logo.png" alt="RP Nutrition"><span>RP NUTRITION</span></a>
+        <p class="tag">Premium sports nutrition, verified genuine, from Roha, Raigad to every pincode in India.</p>
+      </div>
+      <div>
+        <h5>Shop</h5>
+        <ul>
+          <li><a href="#shop">Whey Protein</a></li>
+          <li><a href="#shop">Mass Gainer</a></li>
+          <li><a href="#shop">Pre-Workout</a></li>
+          <li><a href="#shop">Creatine</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <ul>
+          <li><a href="#why">Why Us</a></li>
+          <li><a href="#wholesale">Wholesale</a></li>
+          <li><a href="#location">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Follow</h5>
+        <div class="socials">
+          <a href="#" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+          <a href="#" aria-label="WhatsApp"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M3 5a2 2 0 012-2h3l2 5-2.5 1.5a11 11 0 005 5L14 12l5 2v3a2 2 0 01-2 2C9.5 19 3 12.5 3 5z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <p>© 2026 RP Nutrition, Roha. All rights reserved.</p>
+      <p>Frontend build — backend &amp; secure checkout coming next.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Cart Drawer -->
+<div class="overlay" id="overlay"></div>
+<aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart">
+  <div class="cart-head">
+    <h3>Your Cart</h3>
+    <button class="cart-close" id="cartClose" aria-label="Close cart">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-foot">
+    <div class="cart-total-row"><span>Subtotal</span><span class="amt" id="cartTotal">₹0</span></div>
+    <a href="#" class="btn btn-primary btn-block" id="checkoutBtn">Order via WhatsApp</a>
+    <p class="cart-note">Checkout is temporary — full cart &amp; payment system coming in the next build phase.</p>
+  </div>
+</aside>
+
+<a class="wa-fab" href="https://wa.me/910000000000?text=Hi%20RP%20Nutrition%2C%20I%20have%20a%20query." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg width="27" height="27" viewBox="0 0 24 24" fill="none"><path d="M3 5a2 2 0 012-2h3l2 5-2.5 1.5a11 11 0 005 5L14 12l5 2v3a2 2 0 01-2 2C9.5 19 3 12.5 3 5z" fill="#0A0909"/></svg>
+</a>
+
+<div class="toast" id="toast">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  <span id="toastMsg">Added to cart</span>
+</div>
+
+<script>
+/* ============ PRODUCT DATA ============ */
+const API_BASE = 'https://rp-nutrition-backend.onrender.com';
+let PRODUCTS = [];
+
+const jarIcon = `<svg class="jar" viewBox="0 0 64 64" fill="none"><rect x="16" y="10" width="32" height="8" rx="2" stroke="currentColor" stroke-width="2"/><path d="M18 18h28l3 34a4 4 0 01-4 4.4H19a4 4 0 01-4-4.4L18 18z" stroke="currentColor" stroke-width="2"/><path d="M22 28h20M22 36h20" stroke="currentColor" stroke-width="1.6" stroke-dasharray="2 3"/></svg>`;
+
+/* ============ FETCH PRODUCTS FROM BACKEND ============ */
+async function loadProducts(){
+  prodGrid.innerHTML = `<p style="color:var(--text-faint);grid-column:1/-1;text-align:center;padding:40px;">Loading products...</p>`;
+  try{
+    const res = await fetch(`${API_BASE}/api/products`);
+    if(!res.ok) throw new Error('Failed to fetch');
+    PRODUCTS = await res.json();
+    renderProducts('all');
+  }catch(err){
+    prodGrid.innerHTML = `<p style="color:var(--red);grid-column:1/-1;text-align:center;padding:40px;">Couldn't load products. Is the backend running at ${API_BASE}?</p>`;
+    console.error(err);
+  }
+}
+
+/* ============ STATE ============ */
+let cart = []; // {id, qty}
+
+/* ============ RENDER PRODUCTS ============ */
+const prodGrid = document.getElementById('prodGrid');
+function renderProducts(filter){
+  const list = filter === 'all' ? PRODUCTS : PRODUCTS.filter(p => p.category === filter);
+  prodGrid.innerHTML = list.map(p => `
+    <div class="card">
+      <div class="card-media">
+        <span class="card-cat">${catLabel(p.category)}</span>
+        ${jarIcon}
+        <div class="stamp" title="Verified Genuine">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+      </div>
+      <div class="card-body">
+        <h3>${p.name}</h3>
+        <p class="desc">${p.description}</p>
+        <div class="price-row">
+          <div class="price"><span class="strike">₹${p.mrp}</span>₹${p.price}</div>
+          <button class="add-btn" data-id="${p.id}" aria-label="Add ${p.name} to cart">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  `).join('');
+}
+function catLabel(cat){
+  return {whey:"Whey Protein", gainer:"Mass Gainer", preworkout:"Pre-Workout", creatine:"Creatine", bcaa:"BCAA / Recovery", vitamins:"Vitamins"}[cat] || cat;
+}
+loadProducts();
+
+/* ============ CATEGORY FILTER ============ */
+document.getElementById('catFilters').addEventListener('click', e => {
+  const btn = e.target.closest('.cat-chip');
+  if(!btn) return;
+  document.querySelectorAll('.cat-chip').forEach(c => c.classList.remove('active'));
+  btn.classList.add('active');
+  renderProducts(btn.dataset.cat);
+});
+
+/* ============ ADD TO CART (event delegation) ============ */
+prodGrid.addEventListener('click', e => {
+  const btn = e.target.closest('.add-btn');
+  if(!btn) return;
+  const id = Number(btn.dataset.id);
+  addToCart(id);
+  btn.classList.add('added');
+  setTimeout(() => btn.classList.remove('added'), 500);
+});
+
+function addToCart(id){
+  const item = cart.find(i => i.id === id);
+  if(item) item.qty += 1;
+  else cart.push({id, qty:1});
+  const p = PRODUCTS.find(p => p.id === id);
+  showToast(`${p.name} added to cart`);
+  renderCart();
+}
+
+function changeQty(id, delta){
+  const item = cart.find(i => i.id === id);
+  if(!item) return;
+  item.qty += delta;
+  if(item.qty <= 0) cart = cart.filter(i => i.id !== id);
+  renderCart();
+}
+
+function removeItem(id){
+  cart = cart.filter(i => i.id !== id);
+  renderCart();
+}
+
+/* ============ RENDER CART ============ */
+const cartItemsEl = document.getElementById('cartItems');
+const cartCountEl = document.getElementById('cartCount');
+const cartTotalEl = document.getElementById('cartTotal');
+
+function renderCart(){
+  cartCountEl.textContent = cart.reduce((s,i) => s + i.qty, 0);
+
+  if(cart.length === 0){
+    cartItemsEl.innerHTML = `
+      <div class="cart-empty">
+        <svg width="46" height="46" viewBox="0 0 24 24" fill="none"><path d="M3 3h2l.4 2M7 13h10l3-8H5.4M7 13L5.4 5M7 13l-1.5 6h13M10 21a1 1 0 100-2 1 1 0 000 2zM17 21a1 1 0 100-2 1 1 0 000 2z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <p>Your cart is empty.<br>Add some supplements to get started.</p>
+      </div>`;
+    cartTotalEl.textContent = "₹0";
+    return;
+  }
+
+  let total = 0;
+  cartItemsEl.innerHTML = cart.map(i => {
+    const p = PRODUCTS.find(p => p.id === i.id);
+    const lineTotal = p.price * i.qty;
+    total += lineTotal;
+    return `
+      <div class="cart-item">
+        <div class="ci-media">${jarIcon.replace('class="jar"','width="26" height="26"')}</div>
+        <div class="ci-body">
+          <h5>${p.name}</h5>
+          <div class="ci-price">₹${p.price} × ${i.qty} = ₹${lineTotal}</div>
+          <div class="qty-ctrl">
+            <button data-act="minus" data-id="${p.id}" aria-label="Decrease quantity">−</button>
+            <span>${i.qty}</span>
+            <button data-act="plus" data-id="${p.id}" aria-label="Increase quantity">+</button>
+          </div>
+        </div>
+        <button class="ci-remove" data-remove="${p.id}" aria-label="Remove ${p.name}">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>`;
+  }).join('');
+  cartTotalEl.textContent = `₹${total}`;
+}
+renderCart();
+
+cartItemsEl.addEventListener('click', e => {
+  const qtyBtn = e.target.closest('[data-act]');
+  if(qtyBtn){
+    const id = Number(qtyBtn.dataset.id);
+    changeQty(id, qtyBtn.dataset.act === 'plus' ? 1 : -1);
+    return;
+  }
+  const rmBtn = e.target.closest('[data-remove]');
+  if(rmBtn) removeItem(Number(rmBtn.dataset.remove));
+});
+
+/* ============ MOBILE NAV TOGGLE ============ */
+const menuBtn = document.getElementById('menuBtn');
+const mobileNav = document.getElementById('mobileNav');
+menuBtn.addEventListener('click', () => {
+  const isOpen = mobileNav.classList.toggle('open');
+  menuBtn.setAttribute('aria-expanded', isOpen);
+});
+mobileNav.addEventListener('click', e => {
+  if(e.target.tagName === 'A'){ mobileNav.classList.remove('open'); menuBtn.setAttribute('aria-expanded','false'); }
+});
+
+/* ============ CART DRAWER TOGGLE ============ */
+const cartDrawer = document.getElementById('cartDrawer');
+const overlay = document.getElementById('overlay');
+function openCart(){ cartDrawer.classList.add('open'); overlay.classList.add('show'); }
+function closeCart(){ cartDrawer.classList.remove('open'); overlay.classList.remove('show'); }
+document.getElementById('cartBtn').addEventListener('click', openCart);
+document.getElementById('cartClose').addEventListener('click', closeCart);
+overlay.addEventListener('click', closeCart);
+
+/* ============ CHECKOUT VIA WHATSAPP ============ */
+document.getElementById('checkoutBtn').addEventListener('click', e => {
+  e.preventDefault();
+  if(cart.length === 0){ showToast("Your cart is empty"); return; }
+  let msg = "Hi RP Nutrition, I'd like to order:%0A";
+  let total = 0;
+  cart.forEach(i => {
+    const p = PRODUCTS.find(p => p.id === i.id);
+    total += p.price * i.qty;
+    msg += `- ${p.name} x${i.qty} (₹${p.price * i.qty})%0A`;
+  });
+  msg += `%0ATotal: ₹${total}`;
+  window.open(`https://wa.me/910000000000?text=${msg}`, '_blank');
+});
+
+/* ============ TOAST ============ */
+let toastTimer;
+function showToast(msg){
+  const toast = document.getElementById('toast');
+  document.getElementById('toastMsg').textContent = msg;
+  toast.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => toast.classList.remove('show'), 2200);
+}
+</script>
+</body>
+</html>
